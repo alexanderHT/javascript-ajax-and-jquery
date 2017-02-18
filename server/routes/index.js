@@ -2,8 +2,9 @@ var express = require('express')
 var router = express.Router()
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.json(Math.floor((Math.random() * 6) + 1))
+router.get('/color', function (req, res, next) {
+  var objColor = ['red', 'blue', 'green', 'yellow', 'pink', 'grey']
+  res.json(objColor[Math.floor(Math.random() * 5)])
 })
 
 module.exports = router
